@@ -8,22 +8,39 @@ public class StickmanController : MonoBehaviour
     public float acceleration = 10f; // Acceleration for smooth movement
     public float jumpForce = 10f; // Jumping force
     public Transform leftLeg, rightLeg; // Assign in the Inspector
+    public LayerMask groundLayer;
+    public Transform groundCheck;
+    public float groundCheckRadius = 0.2f;
     private Rigidbody2D rb;
     private bool isGrounded;
     private float moveInput;
+
+    private float horizontalInput;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.interpolation = RigidbodyInterpolation2D.Interpolate; // Smoother physics movement
+        
+        if (groundCheck == null)
+        {
+            Debug.LogError("GroundCheck not assigned to the player controller!");
+        }
     }
 
     void Update()
     {
         // Get player movement input
-        moveInput = 0f;
+        /*moveInput = 0f;
         if (Input.GetKey(KeyCode.A)) moveInput = -1f; // Move left
         if (Input.GetKey(KeyCode.D)) moveInput = 1f;  // Move right
+        */
+        horizontalInput = Input.GetAxis("Horizontal");
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        }
+
 
         // Smooth movement using acceleration
         rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, moveInput * speed, acceleration * Time.deltaTime), rb.velocity.y);
@@ -31,7 +48,7 @@ public class StickmanController : MonoBehaviour
         // Flip character based on direction
         if (moveInput != 0)
             transform.localScale = new Vector3(Mathf.Sign(moveInput), 1, 1);
-
+        
         // Animate legs when moving
         if (Mathf.Abs(rb.velocity.x) > 0.1f)
             AnimateLegs();
@@ -67,6 +84,21 @@ public class StickmanController : MonoBehaviour
             isGrounded = true;
         }
     }
+
+    void FixedUpdate()
+    {
+        rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        if (horizontalInput > 0)
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f);
+        }
+        else if (horizontalInput < 0)
+        {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+        }
+    }
+
 }
 
 /* This is a refrence to the platformer script prototype
