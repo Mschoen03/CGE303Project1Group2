@@ -11,7 +11,7 @@ public class StickmanPlayerController : MonoBehaviour
     public float groundCheckRadius = 0.2f;
 
     private Rigidbody2D rb;
-    private bool isGrounded;
+    public bool isGrounded;
     private float horizontalInput;
 
     // Start is called before the first frame update
