@@ -767,9 +767,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textbox: {fileID: 523000652}
   sentences:
-  - Before you start fighting you need to learn how to move.
+  - Before you start fighting you need to learn how to move and the resason why you
+    are fighting.
+  - The reason why you are fighting is to be crown king of the sticks by defeating
+    the evil stick boss!
   - Use A and D on the keyboard to move back and forth. Press the space bar to jump.
-  - Use H, J, K for simple attacks.
+  - Use H, J, K for simple attacks. Press L to block enemy attacks.
   - Use B and N to throw ninja stars.
   - If you feel ready or just skipped through instructions  click on fight to get
     started! You can't back out now!
