@@ -39,11 +39,20 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Stick Player
-    uniqueID: 106384543
-    locked: 0
   - name: 'Background set '
     uniqueID: 2028011983
+    locked: 0
+  - name: 'Background 2 '
+    uniqueID: 2466607705
+    locked: 0
+  - name: 'Background 3 '
+    uniqueID: 3044107201
+    locked: 0
+  - name: Background 4
+    uniqueID: 1665394737
+    locked: 0
+  - name: Stick Player
+    uniqueID: 106384543
     locked: 0
   - name: foreground
     uniqueID: 2081345523
