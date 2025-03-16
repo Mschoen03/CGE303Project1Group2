@@ -1,28 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement; // Required for restarting the scene
+using UnityEngine.SceneManagement;
 
 public class HealthBar : MonoBehaviour
 {
-    public Image healthBarFill;
-    public GameObject gameOverText; // UI text to show "You lose! Press R to try again"
+    public GameObject player; // Drag your Stickman Player here
+    public int maxHealth = 100; // Maximum health value
+    private int currentHealth; // Player's current health
 
-    private float maxHealth = 100f;
-    private float currentHealth;
-    private bool isGameOver = false; // Track if the game is over
+    public UnityEngine.UI.Image healthBarFill; // Explicitly specify UI Image
+    public GameObject gameOverText; // UI Game Over Message
+
+    private bool isGameOver = false;
 
     void Start()
     {
         currentHealth = maxHealth;
         UpdateHealthBar();
-        gameOverText.SetActive(false); // Hide game over message at start
+
+        if (gameOverText != null)
+        {
+            gameOverText.SetActive(false); // Hide "Game Over" at start
+        }
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(int damage)
     {
-        if (isGameOver) return; // Stop taking damage if game is already over
+        if (isGameOver) return; // Stop taking damage after death
 
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
@@ -36,25 +40,28 @@ public class HealthBar : MonoBehaviour
 
     void UpdateHealthBar()
     {
-        healthBarFill.fillAmount = currentHealth / maxHealth;
+        if (healthBarFill != null)
+        {
+            healthBarFill.fillAmount = (float)currentHealth / maxHealth; // Update health bar
+        }
     }
 
     void GameOver()
     {
         isGameOver = true;
-        gameOverText.SetActive(true); // Show "You lose!" message
+        if (gameOverText != null)
+        {
+            gameOverText.SetActive(true); // Show "You Lost"
+        }
+        Time.timeScale = 0f; // Pause the game
     }
 
     void Update()
     {
         if (isGameOver && Input.GetKeyDown(KeyCode.R))
         {
-            RestartGame();
+            Time.timeScale = 1f; // Resume game
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Restart scene
         }
-    }
-
-    void RestartGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Reloads the current scene
     }
 }
