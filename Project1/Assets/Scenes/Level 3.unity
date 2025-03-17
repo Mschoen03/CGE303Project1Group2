@@ -398,7 +398,7 @@ GameObject:
   - component: {fileID: 880960652}
   - component: {fileID: 880960651}
   - component: {fileID: 880960650}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Flooring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5727,6 +5727,7 @@ GameObject:
   - component: {fileID: 1474876454}
   - component: {fileID: 1474876453}
   - component: {fileID: 1474876456}
+  - component: {fileID: 1474876457}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5895,6 +5896,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1474876457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474876452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e03d7cc844fa154d9dc1df7de7822b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1570088254}
+--- !u!1 &1570088254 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3529301467668748520, guid: c1f2e914a85214608b05963f0b9bb2d3, type: 3}
+  m_PrefabInstance: {fileID: 1886399287}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1576116228
 GameObject:
   m_ObjectHideFlags: 0
