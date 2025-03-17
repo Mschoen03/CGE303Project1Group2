@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 407060229, guid: 869badcae9775104ca69e3ab83110f01, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1570088255}
     - target: {fileID: 5366586278023283426, guid: 869badcae9775104ca69e3ab83110f01, type: 3}
       propertyPath: m_Name
       value: Enemy Variant
@@ -5912,6 +5916,11 @@ MonoBehaviour:
 --- !u!1 &1570088254 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3529301467668748520, guid: c1f2e914a85214608b05963f0b9bb2d3, type: 3}
+  m_PrefabInstance: {fileID: 1886399287}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1570088255 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3529301467668748518, guid: c1f2e914a85214608b05963f0b9bb2d3, type: 3}
   m_PrefabInstance: {fileID: 1886399287}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1576116228
