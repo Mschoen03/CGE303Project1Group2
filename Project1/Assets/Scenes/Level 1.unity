@@ -556,7 +556,7 @@ GameObject:
   - component: {fileID: 589023067}
   - component: {fileID: 589023066}
   m_Layer: 5
-  m_Name: Canvas HP Player
+  m_Name: Canvas HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -663,11 +663,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 50
   currentHealth: 0
+--- !u!114 &693346452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693346450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34a648412151b04790dd6dd4dfa9053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  damageCooldown: 1
 --- !u!4 &693346455 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5366586278023283436, guid: 869badcae9775104ca69e3ab83110f01, type: 3}
   m_PrefabInstance: {fileID: 8828015371444203004}
   m_PrefabAsset: {fileID: 0}
+--- !u!58 &693346458
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693346450}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1
 --- !u!1 &808609226
 GameObject:
   m_ObjectHideFlags: 0
@@ -24661,12 +24691,12 @@ GameObject:
   - component: {fileID: 1340046260}
   - component: {fileID: 1340046259}
   m_Layer: 0
-  m_Name: Spike
+  m_Name: Spike(testing)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1340046257
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24793,6 +24823,35 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   healthBarFill: {fileID: 0}
   gameOverText: {fileID: 834569249}
+--- !u!58 &1345984042
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345984040}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2
+--- !u!114 &1345984043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345984040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 636adb228bb939946a7bab4e37a26ca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 20
 --- !u!4 &1345984044 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3529301467668748518, guid: c1f2e914a85214608b05963f0b9bb2d3, type: 3}
@@ -24826,7 +24885,7 @@ RectTransform:
   m_GameObject: {fileID: 1405226757}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.915, y: 0.915, z: 0.915}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 589023069}
   m_RootOrder: 0
@@ -24849,7 +24908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1345984044}
-  offset: {x: 0, y: 0, z: 0}
+  offset: {x: 0, y: 2, z: 0}
 --- !u!114 &1405226760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25126,7 +25185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 693346455}
-  offset: {x: 0, y: 0, z: 0}
+  offset: {x: 0, y: -3, z: 0}
 --- !u!114 &1966798709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25147,7 +25206,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: '
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -25510,6 +25571,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5366586278023283436, guid: 869badcae9775104ca69e3ab83110f01, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5366586278023283439, guid: 869badcae9775104ca69e3ab83110f01, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

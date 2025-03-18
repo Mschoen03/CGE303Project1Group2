@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement; // Required for scene management
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -19,7 +20,12 @@ public class EnemyHealth : MonoBehaviour
         {
             currentHealth = 0;
             Debug.Log("Enemy Defeated!");
-            Destroy(gameObject); // Destroy enemy when health reaches zero
+            LoadNextLevel(); // Load the next scene
         }
+    }
+
+    void LoadNextLevel()
+    {
+        SceneManager.LoadScene("Level 2"); // Make sure "Level 2" is correctly named in Build Settings
     }
 }
