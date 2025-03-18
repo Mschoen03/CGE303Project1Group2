@@ -387,9 +387,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a7dded31ec54dc7449bf487a572448b6, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.05
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -22466,20 +22466,28 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 1324625256}
     m_ColliderPaths:
-    - - X: -151000000
-        Y: -61000000
-      - X: 571000000
-        Y: -61000000
-      - X: 571000000
-        Y: -29000000
-      - X: -151000000
-        Y: -29000000
+    - - X: -151000100
+        Y: -28999959
+      - X: -151000100
+        Y: -61000041
+      - X: -151000041
+        Y: -61000100
+      - X: 571000041
+        Y: -61000100
+      - X: 571000100
+        Y: -61000041
+      - X: 571000100
+        Y: -28999959
+      - X: 571000041
+        Y: -28999900
+      - X: -151000041
+        Y: -28999900
   m_CompositePaths:
     m_Paths:
-    - - {x: 57.099968, y: -6.1}
-      - {x: 57.099968, y: -2.9}
-      - {x: -15.1, y: -2.9000292}
-      - {x: -15.099972, y: -6.1}
+    - - {x: 57.099976, y: -6.10001}
+      - {x: 57.099976, y: -2.89999}
+      - {x: -15.10001, y: -2.9000251}
+      - {x: -15.099975, y: -6.10001}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!50 &1324625255
