@@ -13,9 +13,12 @@ public class PlayerHealth : MonoBehaviour
     public Image healthBarFill; // UI Health Bar (for Image-based bars)
     public GameObject gameOverText; // UI Game Over Message
 
+    public HealthBarSlider healthbarslider;
+
     void Start()
     {
         currentHealth = maxHealth;
+        healthbarslider.SetMaxHealth(maxHealth);
         UpdateHealthBar();
         gameOverText.SetActive(false); // Hide game over text
     }
@@ -25,6 +28,9 @@ public class PlayerHealth : MonoBehaviour
         if (isGameOver) return; // Stop taking damage if dead
 
         currentHealth -= damage;
+
+        healthbarslider.SetHealth(currentHealth);
+
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         UpdateHealthBar();
 
