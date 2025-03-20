@@ -1,9 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement; // Required for scene management
 
 public class EnemyHealth : MonoBehaviour
 {
-    public int maxHealth = 100;
-    private int currentHealth;
+    public int maxHealth = 50;
+    public int currentHealth;
 
     void Start()
     {
@@ -13,15 +14,18 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        Debug.Log("Enemy took damage! Current Health: " + currentHealth);
+
         if (currentHealth <= 0)
         {
-            Die();
+            currentHealth = 0;
+            Debug.Log("Enemy Defeated!");
+            LoadNextLevel(); // Load the next scene
         }
     }
 
-    void Die()
+    void LoadNextLevel()
     {
-        Debug.Log("Enemy Defeated!");
-        Destroy(gameObject);
+        SceneManager.LoadScene(3); // Make sure "Level 2" is correctly named in Build Settings
     }
 }
