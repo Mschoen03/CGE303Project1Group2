@@ -24873,6 +24873,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas HP
       objectReference: {fileID: 0}
+    - target: {fileID: 2579596682866352647, guid: c38d201855b105742b915b82225350eb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2579596684244242986, guid: c38d201855b105742b915b82225350eb, type: 3}
       propertyPath: enemy
       value: 
