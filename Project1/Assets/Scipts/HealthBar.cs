@@ -12,7 +12,7 @@ public class HealthBar : MonoBehaviour
     public GameObject winText;
 
     public bool isEnemy = false; // Determines if this is an enemy
-    public int nextSceneIndex = 1;
+    //public int nextSceneIndex = 1;
     public int collisionDamage = 10; // Damage when colliding with Player/Enemy
 
     private bool isGameOver = false;
@@ -80,16 +80,12 @@ public class HealthBar : MonoBehaviour
             winText.SetActive(true);
         }
 
-        Invoke("LoadNextLevel", 2f); // Wait 2 seconds before loading next level
+        SceneManager.LoadSceneAsync(3);
     }
+    // Wait 2 seconds before loading next level
 
-    void LoadNextLevel()
-    {
-        if (nextSceneIndex >= 0)
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(nextSceneIndex);
-        }
-    }
+
+    
 
     void Update()
     {
