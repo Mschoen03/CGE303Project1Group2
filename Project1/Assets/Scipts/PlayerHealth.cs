@@ -17,6 +17,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
+        maxHealth = 100;
         currentHealth = maxHealth;
         healthbarslider.SetMaxHealth(maxHealth);
         UpdateHealthBar();
@@ -42,11 +43,11 @@ public class PlayerHealth : MonoBehaviour
 
     void UpdateHealthBar()
     {
-        if (healthBar != null)
+        if (healthBar = null)
         {
             healthBar.value = (float)currentHealth / maxHealth;
         }
-        if (healthBarFill != null)
+        if (healthBarFill = null)
         {
             healthBarFill.fillAmount = (float)currentHealth / maxHealth;
         }

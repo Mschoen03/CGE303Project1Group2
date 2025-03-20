@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 985b27099e1e54182b2a738371ac6708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 0}
+  slider: {fileID: 8420394}
   gradient:
     serializedVersion: 2
     key0: {r: 0.93725497, g: 0.0627451, b: 0.121568635, a: 1}
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 100
-  m_WholeNumbers: 0
+  m_WholeNumbers: 1
   m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
@@ -25342,7 +25342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2579596682866352647, guid: c38d201855b105742b915b82225350eb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2579596684244242986, guid: c38d201855b105742b915b82225350eb, type: 3}
       propertyPath: enemy
@@ -25354,7 +25354,7 @@ PrefabInstance:
       objectReference: {fileID: 1345984044}
     - target: {fileID: 2579596684759640667, guid: c38d201855b105742b915b82225350eb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c38d201855b105742b915b82225350eb, type: 3}
@@ -25373,6 +25373,10 @@ PrefabInstance:
       propertyPath: gameOverText
       value: 
       objectReference: {fileID: 1200384666}
+    - target: {fileID: 1345984041, guid: 105f4fb7fb7850147896ee64dd30badd, type: 3}
+      propertyPath: healthBarFill
+      value: 
+      objectReference: {fileID: 2081107262}
     - target: {fileID: 1345984041, guid: 105f4fb7fb7850147896ee64dd30badd, type: 3}
       propertyPath: healthbarslider
       value: 
