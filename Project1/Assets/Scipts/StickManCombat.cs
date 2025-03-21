@@ -1,9 +1,8 @@
 using UnityEngine;
 
-public class StickmanCombat : MonoBehaviour
+public class StickManCombat : MonoBehaviour
 {
     private Animator animator;
-    private bool isBlocking = false;
 
     void Start()
     {
@@ -12,31 +11,26 @@ public class StickmanCombat : MonoBehaviour
 
     void Update()
     {
-        // Punch logic
-        if (Input.GetKeyDown(KeyCode.H)) // Press 'H' for Punch
+        // Punch
+        if (Input.GetKeyDown(KeyCode.H))
         {
-            animator.SetTrigger("Punch"); // Trigger Punch animation
+            animator.SetTrigger("Punch");
         }
 
-        // Kick logic
-        if (Input.GetKeyDown(KeyCode.J)) // Press 'J' for Kick
+        // Kick
+        if (Input.GetKeyDown(KeyCode.J))
         {
-            animator.SetTrigger("Kick"); // Trigger Kick animation
+            animator.SetTrigger("Kick");
         }
 
-        // Block logic
-        if (Input.GetKey(KeyCode.K)) // Hold 'K' for Block
+        // Block
+        if (Input.GetKey(KeyCode.K))
         {
-            if (!isBlocking)
-            {
-                isBlocking = true;
-                animator.SetBool("Block", true); // Set Block to true when blocking
-            }
+            animator.SetBool("Block", true);
         }
-        else if (isBlocking) // Stop blocking when key is released
+        else
         {
-            isBlocking = false;
-            animator.SetBool("Block", false); // Set Block to false when not blocking
+            animator.SetBool("Block", false);
         }
     }
 }
