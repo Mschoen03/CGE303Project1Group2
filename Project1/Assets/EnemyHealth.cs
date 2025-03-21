@@ -26,6 +26,6 @@ public class EnemyHealth : MonoBehaviour
 
     void LoadNextLevel()
     {
-        SceneManager.LoadScene(3); // Make sure "Level 2" is correctly named in Build Settings
+        SceneManager.LoadScene(5); // Make sure "Level 2" is correctly named in Build Settings
     }
 }
