@@ -4,33 +4,62 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    public int attackDamage = 20; // Damage the player deals
+    public int punchDamage = 20; // Damage the player deals with a punch
+    public int kickDamage = 30; // Damage the player deals with a kick
     private Collider2D enemyInRange; // Stores the enemy in range
+    private Animator animator;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     void Update()
     {
-        // Check if the player presses "H" to attack
+        // Check if the player presses "H" to punch
         if (Input.GetKeyDown(KeyCode.H))
         {
-            Attack();
+            Punch();
+        }
+
+        // Check if the player presses "J" to kick
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            Kick();
         }
     }
 
-    private void Attack()
+    private void Punch()
     {
         if (enemyInRange != null)
         {
-            // Try to get the EnemyHealth component and deal damage
             EnemyHealth enemyHealth = enemyInRange.GetComponent<EnemyHealth>();
             if (enemyHealth != null)
             {
-                enemyHealth.TakeDamage(attackDamage);
-                Debug.Log("Enemy hit!");
+                enemyHealth.TakeDamage(punchDamage);
+                Debug.Log("Enemy punched!");
             }
         }
         else
         {
-            Debug.Log("No enemy in range to attack!");
+            Debug.Log("No enemy in range to punch!");
+        }
+    }
+
+    private void Kick()
+    {
+        if (enemyInRange != null)
+        {
+            EnemyHealth enemyHealth = enemyInRange.GetComponent<EnemyHealth>();
+            if (enemyHealth != null)
+            {
+                enemyHealth.TakeDamage(kickDamage);
+                Debug.Log("Enemy kicked!");
+            }
+        }
+        else
+        {
+            Debug.Log("No enemy in range to kick!");
         }
     }
 

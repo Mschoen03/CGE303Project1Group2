@@ -2,20 +2,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-
 public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
-    private bool isGameOver = false;  // Track game over state
-    private bool isGameWon = false;   // Track win state
+    private bool isGameOver = false;
+    private bool isGameWon = false;
 
-   
-    public Image healthBarFill; // UI Health Bar (for Image-based bars)
-    public GameObject gameOverText; // UI Game Over Message
-    public GameObject winText; // UI Win Message
+    public Image healthBarFill;
+    public GameObject gameOverText;
+    public GameObject winText;
 
     public HealthBarSlider healthbarslider;
+
+    public float blockDamageReduction = 0.5f; // 50% damage reduction when blocking
 
     void Start()
     {
@@ -24,12 +24,19 @@ public class PlayerHealth : MonoBehaviour
         healthbarslider.SetMaxHealth(maxHealth);
         UpdateHealthBar();
         gameOverText.SetActive(false);
-        winText.SetActive(false); // Hide win text at start
+        winText.SetActive(false);
     }
 
     public void TakeDamage(int damage)
     {
-        if (isGameOver || isGameWon) return; // Stop taking damage if game is over or won
+        if (isGameOver || isGameWon) return;
+
+        Animator animator = GetComponent<Animator>();
+        if (animator != null && animator.GetBool("Block"))
+        {
+            damage = Mathf.RoundToInt(damage * blockDamageReduction);
+            Debug.Log("Blocked damage reduced to: " + damage);
+        }
 
         currentHealth -= damage;
         healthbarslider.SetHealth(currentHealth);
@@ -54,17 +61,15 @@ public class PlayerHealth : MonoBehaviour
     {
         isGameOver = true;
         gameOverText.SetActive(true);
-        Time.timeScale = 0f; // Pause game
+        Time.timeScale = 0f;
     }
-
-    
 
     void Update()
     {
         if (isGameOver && Input.GetKeyDown(KeyCode.R))
         {
             Time.timeScale = 1f;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Restart
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
