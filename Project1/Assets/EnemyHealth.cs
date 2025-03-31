@@ -26,6 +26,17 @@ public class EnemyHealth : MonoBehaviour
 
     void LoadNextLevel()
     {
-        SceneManager.LoadScene(5); // Make sure "Level 2" is correctly named in Build Settings
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextSceneIndex = currentSceneIndex + 1;
+
+        // Ensure the next scene index is valid
+        if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+        {
+            SceneManager.LoadScene(nextSceneIndex);
+        }
+        else
+        {
+            Debug.Log("No more levels! You've reached the last scene.");
+        }
     }
 }
