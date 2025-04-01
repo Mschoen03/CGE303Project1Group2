@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4238744706748546026, guid: 7b619679deeef824ba42faa6a27a809e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4238744706802402210, guid: 7b619679deeef824ba42faa6a27a809e, type: 3}
       propertyPath: m_Name
       value: Health 1
@@ -216,6 +220,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4238744706802402270, guid: 7b619679deeef824ba42faa6a27a809e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4238744707253304083, guid: 7b619679deeef824ba42faa6a27a809e, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
