@@ -359,6 +359,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4238744706802402268, guid: 7b619679deeef824ba42faa6a27a809e, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4238744706802402268, guid: 7b619679deeef824ba42faa6a27a809e, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1280
+      objectReference: {fileID: 0}
+    - target: {fileID: 4238744706802402268, guid: 7b619679deeef824ba42faa6a27a809e, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 720
+      objectReference: {fileID: 0}
     - target: {fileID: 4238744706802402270, guid: 7b619679deeef824ba42faa6a27a809e, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -25082,6 +25094,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2579596682866352645, guid: c38d201855b105742b915b82225350eb, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2579596682866352645, guid: c38d201855b105742b915b82225350eb, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1280
+      objectReference: {fileID: 0}
+    - target: {fileID: 2579596682866352645, guid: c38d201855b105742b915b82225350eb, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 720
+      objectReference: {fileID: 0}
     - target: {fileID: 2579596682866352647, guid: c38d201855b105742b915b82225350eb, type: 3}
       propertyPath: m_Name
       value: Canvas HP
@@ -25118,6 +25142,18 @@ PrefabInstance:
     - target: {fileID: 4777101517697757506, guid: ea62fff5b835f0b449b2c4f612c40a76, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777101517697757507, guid: ea62fff5b835f0b449b2c4f612c40a76, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777101517697757507, guid: ea62fff5b835f0b449b2c4f612c40a76, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1280
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777101517697757507, guid: ea62fff5b835f0b449b2c4f612c40a76, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 720
       objectReference: {fileID: 0}
     - target: {fileID: 4777101517697757509, guid: ea62fff5b835f0b449b2c4f612c40a76, type: 3}
       propertyPath: m_Pivot.x

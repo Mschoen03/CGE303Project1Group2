@@ -138,6 +138,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Health 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4238744706802402268, guid: 7b619679deeef824ba42faa6a27a809e, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4238744706802402268, guid: 7b619679deeef824ba42faa6a27a809e, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1280
+      objectReference: {fileID: 0}
+    - target: {fileID: 4238744706802402268, guid: 7b619679deeef824ba42faa6a27a809e, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 720
+      objectReference: {fileID: 0}
     - target: {fileID: 4238744706802402270, guid: 7b619679deeef824ba42faa6a27a809e, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -499,6 +511,18 @@ PrefabInstance:
     - target: {fileID: 120468032560157003, guid: 7b1265b287ed59143a7ef5b5bdf1a9ea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120468032560157005, guid: 7b1265b287ed59143a7ef5b5bdf1a9ea, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 120468032560157005, guid: 7b1265b287ed59143a7ef5b5bdf1a9ea, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1280
+      objectReference: {fileID: 0}
+    - target: {fileID: 120468032560157005, guid: 7b1265b287ed59143a7ef5b5bdf1a9ea, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 720
       objectReference: {fileID: 0}
     - target: {fileID: 120468032560157007, guid: 7b1265b287ed59143a7ef5b5bdf1a9ea, type: 3}
       propertyPath: m_Name
@@ -8023,6 +8047,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2579596682866352645, guid: c38d201855b105742b915b82225350eb, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2579596682866352645, guid: c38d201855b105742b915b82225350eb, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1280
+      objectReference: {fileID: 0}
+    - target: {fileID: 2579596682866352645, guid: c38d201855b105742b915b82225350eb, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 720
+      objectReference: {fileID: 0}
     - target: {fileID: 2579596682866352647, guid: c38d201855b105742b915b82225350eb, type: 3}
       propertyPath: m_Name
       value: Canvas HP
@@ -8100,7 +8136,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -8142,7 +8178,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1012713fbaef3ef46bd7ef859843d6d8, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -21948,8 +21984,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2133741595}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.33, y: -0.121, z: 0}
-  m_LocalScale: {x: 4.8829384, y: 4.609571, z: 1}
+  m_LocalPosition: {x: 27.581, y: 1.1, z: 0}
+  m_LocalScale: {x: 11.298631, y: 10.666086, z: 2.3139}
   m_Children:
   - {fileID: 1056581442}
   - {fileID: 999523449}
