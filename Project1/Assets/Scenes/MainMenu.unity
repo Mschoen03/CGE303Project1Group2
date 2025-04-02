@@ -193,7 +193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Tutorial
+  m_Text: 'Credits
 
 '
 --- !u!222 &218193132
@@ -370,7 +370,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Credits
+  m_Text: 'Tutorial
+
+'
 --- !u!222 &478200828
 CanvasRenderer:
   m_ObjectHideFlags: 0
