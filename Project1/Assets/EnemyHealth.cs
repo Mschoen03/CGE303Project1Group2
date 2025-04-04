@@ -20,23 +20,9 @@ public class EnemyHealth : MonoBehaviour
         {
             currentHealth = 0;
             Debug.Log("Enemy Defeated!");
-            LoadNextLevel(); // Load the next scene
+             // Load the next scene
         }
     }
 
-    void LoadNextLevel()
-    {
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        int nextSceneIndex = currentSceneIndex + 1;
-
-        // Ensure the next scene index is valid
-        if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
-        {
-            SceneManager.LoadScene(nextSceneIndex);
-        }
-        else
-        {
-            Debug.Log("No more levels! You've reached the last scene.");
-        }
-    }
+   
 }
